@@ -18,6 +18,7 @@ public:
                     if(count==1)
                     {
                         unique=nums[i];
+                        return unique;
                     }
                     count=1;
                 }

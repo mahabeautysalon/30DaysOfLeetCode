@@ -17,8 +17,7 @@ public:
                 }else{
                     if(count==1)
                     {
-                        unique=nums[i];
-                        return unique;
+                        return nums[i];
                     }
                     count=1;
                 }

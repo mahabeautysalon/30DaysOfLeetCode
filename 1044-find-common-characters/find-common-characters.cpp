@@ -11,13 +11,12 @@ public:
             temp[0]=words[0][i];
             for(int j=1; j<words.size(); j++)
             {
-                cout << "pos : " << words[j].find(temp) << endl;
-                if(words[j].find(temp)==string::npos)
+                pos = words[j].find(temp);
+                if(pos==string::npos)
                 {
                     check = false;
                     break;
                 }else{
-                    pos = words[j].find(temp);
                     words[j].erase(words[j].begin()+pos);
                 }
             }

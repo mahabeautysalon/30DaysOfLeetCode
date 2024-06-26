@@ -1,14 +1,18 @@
 class Solution:
     def findLucky(self, arr: List[int]) -> int:
-        count = {}
-        for val in arr:
-            if count.get(val):
-                count[val] +=1
+        arr.sort()
+        count= 1
+        maxFrequency= -1
+        pre = 0
+        for i in range(len(arr)-1):
+            if arr[i]==arr[i+1]:
+                count+=1
             else:
-                count[val] = 1
-        print(count)
-        maxFrequency = -1
-        for key,val in count.items():
-            if key==val and maxFrequency < val:
-                maxFrequency = val
+                if count == arr[i]:
+                    if maxFrequency < arr[i]:
+                        maxFrequency = arr[i]
+                count = 1
+        if count == arr[-1]:
+            if maxFrequency < arr[i]:
+                maxFrequency = arr[i]
         return maxFrequency

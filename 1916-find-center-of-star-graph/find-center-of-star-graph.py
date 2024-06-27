@@ -1,10 +1,7 @@
 class Solution:
     def findCenter(self, edges: List[List[int]]) -> int:
-        center = 0
-        row1 = edges[0]
-        row2 = edges[1]
-        for val in row1:
-            for val2 in row2:
+        for val in edges[0]:
+            for val2 in edges[1]:
                 if val == val2:
                     return val
                     

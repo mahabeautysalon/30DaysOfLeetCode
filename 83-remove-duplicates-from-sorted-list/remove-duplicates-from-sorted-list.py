@@ -10,7 +10,10 @@ class Solution:
         start = head
         while start!=None and start.next!=None:
             if start.val == start.next.val:
-                start.next = start.next.next
+                temp = start.next
+                while temp and start.val == temp.val:
+                    temp = temp.next
+                start.next = temp
             else:
                 start = start.next
         return head

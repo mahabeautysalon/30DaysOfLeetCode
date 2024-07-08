@@ -13,10 +13,11 @@ class MyHashMap(object):
         
 
     def get(self, key):
+        if key not in self.myMap:
+            return -1
         for k, value in self.myMap.items():
             if k == key:
                 return value
-        return -1
         """
         :type key: int
         :rtype: int

@@ -8,5 +8,4 @@ class Solution:
                         logsList.pop()
             else:
                 logsList.append(val)
-            print(logsList)
         return len(logsList)

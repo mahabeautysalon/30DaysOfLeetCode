@@ -12,7 +12,6 @@ class Solution:
             if not root:
                 return
             inorder(root.left)
-            print(root.val)
             self.count+=1
             if self.count==k:
                 self.result = root.val

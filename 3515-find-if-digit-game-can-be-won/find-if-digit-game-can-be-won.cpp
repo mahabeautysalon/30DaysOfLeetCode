@@ -11,9 +11,9 @@ public:
                 singleSum += nums[i];
             }
         }
-        if(singleSum == doubleSum){
-            return false;
+        if(singleSum != doubleSum){
+            return true;
         }
-        return true;
+        return false;
     }
 };

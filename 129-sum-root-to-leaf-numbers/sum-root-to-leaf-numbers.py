@@ -7,19 +7,17 @@
 class Solution:
     def sumNumbers(self, root: Optional[TreeNode]) -> int:
         self.sumVal = 0
-        def findPaths(root,path,paths):
+        def findPaths(root,path):
             if not root:
                 return
             path+=str(root.val)
             if root.left==None and root.right==None:
-                paths.append(int(path))
                 self.sumVal += int(path)
             else:
-                findPaths(root.left,path,paths)
-                findPaths(root.right,path,paths)
+                findPaths(root.left,path)
+                findPaths(root.right,path)
             #print(path)
             #print(paths)
             path = path[:-1]
-        paths = []
-        findPaths(root,"",paths)
+        findPaths(root,"")
         return self.sumVal

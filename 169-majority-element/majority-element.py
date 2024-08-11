@@ -3,7 +3,6 @@ class Solution:
         n = len(nums)
         majority = (n//2)
         temp = set(nums)
-        print(temp)
         for val in temp:
             if nums.count(val) > majority:
                 return val

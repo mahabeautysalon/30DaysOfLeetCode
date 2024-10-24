@@ -19,8 +19,6 @@ class Solution:
             for i in range(len(q)):
                 node = q.popleft()
                 if node:
-                    #print("level traversal func ",end=" ")
-                    #print(node.val)
                     if node.left:
                         q.append(node.left)
                         temp.append(node.left.val)
@@ -45,9 +43,6 @@ class Solution:
             temp_q2 = copy.copy(q2)
             temp1,q11 = levelTraversal(q1)
             temp2,q22 = levelTraversal(q2)
-            #print("Frist check ")
-            #print(temp1)
-            #print(temp2)
             q1 = q11
             q2 = q22
             if(temp1 != temp2):
@@ -58,10 +53,8 @@ class Solution:
                 n= minVal(n1,n2)
                 
                 for i in range(n):
-                    #print("inside the for loop",end=" ")
                     node1 = q1.popleft()
                     node2 = q2.popleft()
-                    #print(node1.val)
                     if node1 and node2:
                         if (node1.left and node2.right):
                             if (node1.left.val == node2.right.val):
@@ -71,15 +64,9 @@ class Solution:
                                 node1.left, node1.right = node1.right, node1.left
                 temp1,q1 = levelTraversal(temp_q1)
                 temp2,q2 = levelTraversal(temp_q2)
-                #print(" ")
-                #print("second check")
-                #print(temp1)
-                #print(temp2)
                 if(temp1 != temp2):
                     return False
-            
         if len(q1)>0 or len(q2):
-            #print("one of queue is not empty")
             return False
         return True
         

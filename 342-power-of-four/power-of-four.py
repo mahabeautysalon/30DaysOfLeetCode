@@ -5,8 +5,6 @@ class Solution:
         elif n == 1:
             return True
         def power(n,exp):
-            print(f" n : {n}")
-            print(f"exp * 4 : {4*exp}")
             if n < 4*exp:
                 return False
             elif n == 4*exp:

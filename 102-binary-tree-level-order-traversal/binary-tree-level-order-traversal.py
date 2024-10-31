@@ -20,5 +20,6 @@ class Solution:
                 if node.right:
                     queue.append(node.right)
                     temp.append(node.right.val)
-            ans.append(temp)
-        return ans[:-1]
+            if temp:
+                ans.append(temp)
+        return ans

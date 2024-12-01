@@ -23,11 +23,4 @@ class Solution:
                         module += 26
                 temp = alpha[val-1]*quotient + temp
                 k = module
-                
-            """print(f"n : {n}")
-            print(f"k : {k}")
-            print(f"val : {val}")
-            print(f"quotient : {quotient}")
-            print(f"module : {module}")
-            print(f"temp  : {temp}")"""
         return temp

@@ -1,12 +1,15 @@
 class Solution {
 public:
     bool checkIfExist(vector<int>& arr) {
+        map<int,int>mp;
         for(int i=0; i<arr.size(); i++){
-            for(int j=0; j<arr.size(); j++){
-                if( i!=j && arr[i] == arr[j]*2){
-                    return true;
-                }
+            if(mp.find(arr[i]) != mp.end()){
+                return true;
             }
+            if(arr[i]%2 == 0){
+                mp[arr[i]/2] = true;
+            }
+            mp[arr[i]*2] = true;
         }
         return false;
     }
